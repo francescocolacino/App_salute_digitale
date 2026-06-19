@@ -1,6 +1,6 @@
 # App Salute Digitale
 
-Sito PHP e app React Native collegati allo stesso database MySQL.
+Piattaforma di salute digitale per la consultazione e gestione di dati clinici.
 
 ## Avvio rapido
 
