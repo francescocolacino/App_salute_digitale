@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - App Salute Digitale</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="getDashboardCounts()">
+
+    <!-- Header caricato da common.js -->
+    <div id="header"></div>
+
+    <main class="page-container">
+
+        <section class="page-title">
+            <h1>Dashboard</h1>
+            <p>Benvenuto nella dashboard dell'applicazione per la salute digitale.</p>
+        </section>
+
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h2>Pazienti registrati</h2>
+                <p id="patientsCount">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Medici inseriti</h2>
+                <p id="doctorsCount">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Visite prenotate</h2>
+                <p id="appointmentsCount">0</p>
+            </div>
+
+        </section>
+
+        <section class="dashboard-menu">
+
+            <h2>Gestione dati</h2>
+
+            <div class="menu-links">
+                <a href="patients.html" class="button-link">Lista pazienti</a>
+                <a href="doctors.html" class="button-link">Lista medici</a>
+                <a href="appointments.html" class="button-link">Lista visite</a>
+            </div>
+
+        </section>
+
+        <p id="message"></p>
+
+    </main>
+
+    <!-- Footer caricato da common.js -->
+    <div id="footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/fhir.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Aggiungi paziente - App Salute Digitale</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header caricato da common.js -->
+    <div id="header"></div>
+
+    <main class="page-container">
+
+        <section class="page-title">
+            <h1>Aggiungi paziente</h1>
+            <p>Compila il modulo per inserire un nuovo paziente.</p>
+        </section>
+
+        <section class="form-section">
+
+            <form id="patientForm">
+
+                <fieldset>
+                    <legend>Dati paziente</legend>
+
+                    <div class="form-group">
+                        <label for="firstName">Nome</label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName" 
+                            placeholder="Inserisci il nome"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Cognome</label>
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            placeholder="Inserisci il cognome"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthDate">Data di nascita</label>
+                        <input 
+                            type="date" 
+                            id="birthDate" 
+                            name="birthDate"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Numero di telefono</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="Inserisci il numero di telefono"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fiscalCode">Codice fiscale</label>
+                        <input 
+                            type="text" 
+                            id="fiscalCode" 
+                            name="fiscalCode" 
+                            placeholder="Inserisci il codice fiscale"
+                            required>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" onclick="createPatient()">Salva paziente</button>
+                        <button type="button" onclick="window.location.href='patients.html'">Annulla</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer caricato da common.js -->
+    <div id="footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/fhir.js"></script>
+
+</body>
+</html>

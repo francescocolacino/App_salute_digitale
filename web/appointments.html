@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Visite prenotate - App Salute Digitale</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="getAppointments()">
+
+    <!-- Header caricato da common.js -->
+    <div id="header"></div>
+
+    <main class="page-container">
+
+        <section class="page-title">
+            <h1>Visite prenotate</h1>
+            <p>Elenco delle visite salvate su FHIR.</p>
+        </section>
+
+        <section class="actions-section">
+            <a href="add_appointment.html" class="button-link">Aggiungi visita</a>
+        </section>
+
+        <section class="table-section">
+
+            <h2>Lista visite</h2>
+
+            <!-- Le visite verranno caricate da FHIR tramite fhir.js -->
+            <ul id="appointments">
+            </ul>
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer caricato da common.js -->
+    <div id="footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/fhir.js"></script>
+
+</body>
+</html>

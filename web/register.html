@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrazione - App Salute Digitale</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header caricato da common.js -->
+    <div id="header"></div>
+
+    <main class="page-container">
+
+        <section class="page-title">
+            <h1>Registrazione</h1>
+            <p>Crea un account per accedere alla dashboard.</p>
+        </section>
+
+        <section class="form-section">
+
+            <form id="registerForm" action="php/register_action.php" method="post">
+
+                <fieldset>
+                    <legend>Dati utente</legend>
+
+                    <div class="form-group">
+                        <label for="firstName">Nome</label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName" 
+                            placeholder="Inserisci il nome"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Cognome</label>
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            placeholder="Inserisci il cognome"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Inserisci la tua email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Inserisci la password"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Conferma password</label>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            placeholder="Ripeti la password"
+                            required>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Registrati</button>
+                        <a href="login.html" class="button-link secondary-button">Accedi</a>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer caricato da common.js -->
+    <div id="footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+</html>

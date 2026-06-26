@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>App Salute Digitale</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="getDashboardCounts()">
+
+    <!-- Header caricato da common.js -->
+    <div id="header"></div>
+
+    <main class="home-container">
+
+        <section class="home-intro">
+
+            <div class="home-text">
+                <h1>App Salute Digitale</h1>
+
+                <p>
+                    Sistema web per la gestione di pazienti, medici e visite
+                    tramite risorse FHIR.
+                </p>
+
+            </div>
+
+            <div class="home-actions">
+                <a href="login.html" class="button-link">Accedi alla dashboard</a>
+                <a href="register.html" class="button-link secondary-button">Registrati</a>
+            </div>
+
+        </section>
+
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h2>Pazienti registrati</h2>
+                <p id="patientsCount">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Medici inseriti</h2>
+                <p id="doctorsCount">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Visite prenotate</h2>
+                <p id="appointmentsCount">0</p>
+            </div>
+
+        </section>
+
+       
+
+        <p id="message"></p>
+
+    </main>
+
+    <!-- Footer caricato da common.js -->
+    <div id="footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/fhir.js"></script>
+
+</body>
+</html>

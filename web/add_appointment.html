@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Aggiungi visita - App Salute Digitale</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="getPatientsAndDoctors()">
+
+    <!-- Header caricato da common.js -->
+    <div id="header"></div>
+
+    <main class="page-container">
+
+        <section class="page-title">
+            <h1>Aggiungi visita</h1>
+            <p>Compila il modulo per prenotare una nuova visita.</p>
+        </section>
+
+        <section class="form-section">
+
+            <form id="appointmentForm">
+
+                <fieldset>
+                    <legend>Dati visita</legend>
+
+                    <div class="form-group">
+                        <label for="visitType">Tipologia di visita</label>
+                        <input 
+                            type="text" 
+                            id="visitType" 
+                            name="visitType" 
+                            placeholder="Esempio: Visita cardiologica"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitDate">Data visita</label>
+                        <input 
+                            type="date" 
+                            id="visitDate" 
+                            name="visitDate" 
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patientSelect">Paziente</label>
+                        <select id="patientSelect" name="patientSelect" required>
+                            <option value="">Seleziona un paziente</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="doctorSelect">Medico</label>
+                        <select id="doctorSelect" name="doctorSelect" required>
+                            <option value="">Seleziona un medico</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Note</label>
+                        <textarea 
+                            id="notes" 
+                            name="notes" 
+                            rows="5" 
+                            placeholder="Inserisci eventuali note sulla visita"></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" onclick="createAppointment()">Salva visita</button>
+                        <button type="button" onclick="window.location.href='appointments.html'">Annulla</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer caricato da common.js -->
+    <div id="footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/fhir.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Aggiungi medico - App Salute Digitale</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header caricato da common.js -->
+    <div id="header"></div>
+
+    <main class="page-container">
+
+        <section class="page-title">
+            <h1>Aggiungi medico</h1>
+            <p>Compila il modulo per inserire un nuovo medico.</p>
+        </section>
+
+        <section class="form-section">
+
+            <form id="doctorForm">
+
+                <fieldset>
+                    <legend>Dati medico</legend>
+
+                    <div class="form-group">
+                        <label for="firstName">Nome</label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName" 
+                            placeholder="Inserisci il nome"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Cognome</label>
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            placeholder="Inserisci il cognome"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Numero di telefono</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="Inserisci il numero di telefono"
+                            required>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" onclick="createDoctor()">Salva medico</button>
+                        <button type="button" onclick="window.location.href='doctors.html'">Annulla</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer caricato da common.js -->
+    <div id="footer"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/fhir.js"></script>
+
+</body>
+</html>
