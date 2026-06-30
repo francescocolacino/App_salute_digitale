@@ -56,7 +56,7 @@ Le richieste FHIR puntano direttamente a:
 https://hapi.fhir.org/baseR4/
 ```
 
-Se durante la demo il professore ti chiede del backend FHIR, puoi dire che il progetto usa il server pubblico di test HAPI FHIR in versione R4.
+
 
 ## Login
 
